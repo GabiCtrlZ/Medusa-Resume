@@ -2,12 +2,9 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const port = 8080
 
-const mongoose = require('mongoose')
 const api = require('./routes/api')
 const app = express()
 const path = require('path')
-
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/resumes', {useNewUrlParser: true})
 
 app.use(express.static(path.join(__dirname, '..', 'build')))
 
