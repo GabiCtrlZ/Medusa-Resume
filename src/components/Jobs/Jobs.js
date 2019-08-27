@@ -22,7 +22,7 @@ class Jobs extends Component {
         this.setState({ loading: true })
         let job = this.state.job.split(' ').join('+')
         let location = this.state.location.split(' ').join('+')
-        const data = await axios.get(`http://localhost:8080/findjobs?q=${job}&l=${location}`)
+        const data = await axios.get(`/findjobs?q=${job}&l=${location}`)
         if (data.data === 'invalid request') {
             alert('invalid request')
             return this.setState({ loading: false })

@@ -22,7 +22,7 @@ class LandingBusiness extends Component {
             formData.append(`resume${counter++}`, file);
         }
         this.setState({ sentPDF: true })
-        const data = await axios.post('http://localhost:8080/filebusiness', formData)
+        const data = await axios.post('/filebusiness', formData)
         this.props.getData(data.data)
     }
     handleChange = (e) => {

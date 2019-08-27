@@ -21,7 +21,7 @@ class Analytics extends Component {
         }
         formData.append("resume", resumefile.files[0]);
         this.setState({ sentPDF: true })
-        const data = await axios.post('http://localhost:8080/file', formData)
+        const data = await axios.post('/file', formData)
         self.setState({ data: data.data, sentPDF: false })
     }
     render() {
