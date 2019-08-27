@@ -7,6 +7,8 @@ let  cvParse =  async function (path) {
        pyshell.on('message', async function (message) {
             output = message
             resolve()
+            // eslint-disable-next-line no-unused-expressions
+            pyshell.end
         })
     })
      await time

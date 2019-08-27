@@ -6,6 +6,8 @@ let pdfToText = async function(path) {
         pdf2html.text(path, function (err, text) {
             output = text
             resolve()
+            // eslint-disable-next-line no-unused-expressions
+            pdf2html.end
         })
     })
     await text
