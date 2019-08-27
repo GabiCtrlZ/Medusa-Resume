@@ -10,6 +10,7 @@ let pdfToText = async function(path) {
             pdf2html.end
         })
     })
+    
     await text
     return output
 }
