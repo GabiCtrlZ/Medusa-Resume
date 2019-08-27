@@ -18,7 +18,7 @@ class Results extends Component {
                                 <p><i class="material-icons">chevron_right</i>You used {data.words} words</p>
                                 <p><i class="material-icons">chevron_right</i>You wrote {data.sentence} sentences</p>
                                 <p><i class="material-icons">chevron_right</i>you {(data.email === 1 && data.phone === 1) ? 'included' : 'didnt include'} your contact information</p>
-                                <p><i class="material-icons">chevron_right</i>you {(data.summery === 1) ? null : "didn't"} wrote a summery</p>
+                                <p><i class="material-icons">chevron_right</i>you {(data.summery === 1) ? null : "didn't"} wrote a summary</p>
                                 <p><i class="material-icons">chevron_right</i>you used {(data.oldDates === 1) ? 'un' : null}relevant dates </p>
                                 <p><i class="material-icons">chevron_right</i>you {(data.chronOrder === 1) ? "ordered": 'didnt order'} the resume dates chronologicly</p>
                                 <p><i class="material-icons">chevron_right</i>your resume is {data.numOfPages} pages long</p>
