@@ -40,7 +40,7 @@ class LandingBusiness extends Component {
                     <div className="row container_search center-align">
                         <h2 className="header"><i className="material-icons">assessment</i>Welcome to Medusa Resume Business</h2>
                         <h6 className="grey-text text-darken-3 lighten-3">Here you can upload all the canadaite application you recieved and
-                        see in a calculated table every thing!</h6>
+                        view all of them!</h6>
                         <div className='container_search file_upload' >
                             <div className='container' >
                                 <div className='container' >

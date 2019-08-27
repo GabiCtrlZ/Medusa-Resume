@@ -15,12 +15,13 @@ class Results extends Component {
                             </div>
                             <div className="card-action">
                                 <ScoreCircle score={data.resumeScore} />
-                                <p>You used {data.words} words</p>
-                                <p>You wrote {data.sentence} sentences</p>
-                                <p>you {(data.email === 1 && data.phone === 1) ? 'included' : 'didnt include'} your contact information</p>
-                                <p>you {(data.summery === 1) ? null : "didn't"} wrote a summery</p>
-                                <p>you used {(data.oldDates === 1) ? null : 'un'}relevant dates </p>
-                                <p>you {(data.chronOrder === 1) ? "ordered": 'didnt order'} the resume dates chronologicly</p>
+                                <p><i class="material-icons">chevron_right</i>You used {data.words} words</p>
+                                <p><i class="material-icons">chevron_right</i>You wrote {data.sentence} sentences</p>
+                                <p><i class="material-icons">chevron_right</i>you {(data.email === 1 && data.phone === 1) ? 'included' : 'didnt include'} your contact information</p>
+                                <p><i class="material-icons">chevron_right</i>you {(data.summery === 1) ? null : "didn't"} wrote a summery</p>
+                                <p><i class="material-icons">chevron_right</i>you used {(data.oldDates === 1) ? 'un' : null}relevant dates </p>
+                                <p><i class="material-icons">chevron_right</i>you {(data.chronOrder === 1) ? "ordered": 'didnt order'} the resume dates chronologicly</p>
+                                <p><i class="material-icons">chevron_right</i>your resume is {data.numOfPages} pages long</p>
                             </div>
                         </div>
                     </div>

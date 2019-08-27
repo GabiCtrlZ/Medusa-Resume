@@ -7,9 +7,21 @@ body {
   background-image: url('./Pics/JobsBackground.jpg');
   background-repeat: no-repeat;
   background-size: cover;
- 
 }
-#b1, #b2{
+
+.card-action p, .card-action p i {
+  color: white;
+}
+
+.card-action p i {
+  display: inline-block;
+}
+
+#brand-logo {
+  margin-left: 1%;
+}
+
+#b1, #b2 {
   display: inline-block;
   padding-left: 5%;
   padding-right: 5%;
@@ -19,67 +31,76 @@ body {
   margin: 1%;
   cursor: pointer;
 }
-#b1:hover, #b2:hover{
-  background-color: #8f8f8f8c;
 
+#b1:hover, #b2:hover {
+  background-color: #8f8f8f8c;
 }
-.light_on{
+
+.light_on {
   background-color: #5252528c;
 }
+
 .parallax, .parallaxz, .parallaxy, .parallaxm, .parallaxo {
   /* Full height */
-  height: 100%; 
-
+  height: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.parallaxo{
+
+.parallaxo {
   background-image: url('./Pics/LandingBusiness.png')
 }
+
 .parallaxz {
   background-image: url('./Pics/SecondBackground.jpg');
 }
-.parallax{
+
+.parallax {
   background-image: url('./Pics/Background.png');
-} 
-.parallaxy{
+}
+
+.parallaxy {
   background-image: url('./Pics/Jellyfish.jpg');
 }
-.parallaxm{
+
+.parallaxm {
   background-image: url('./Pics/EditResume.jpg');
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.expirince
-{
+.expirince {
   margin: 20px;
 }
+
 .nav_bar {
   background-color: #140f46;
 }
-.event{
+
+.event {
   display: inline-block;
 }
 
 #nav-mobile li:hover {
   background-color: #2c2857
 }
+
 .welcome_card {
   left: 200px;
   top: 200px;
 }
-.event
-{
+
+.event {
   font-size: 2em;
   height: 7vh;
 }
-.activity
-{
+
+.activity {
   position: absolute;
   width: 10vw;
   display: grid;
@@ -89,12 +110,15 @@ code {
   border-style: solid;
   z-index: 2;
 }
+
 strong {
   font-weight: bold
 }
-.with_gap{
+
+.with_gap {
   display: inline-block;
 }
+
 #client_card, #client_card2 {
   background-color: rgba(39, 41, 58, 0.904);
   position: fixed;
@@ -103,17 +127,25 @@ strong {
   top: 15%;
   animation: fade 1s
 }
-#client_card2{
+
+#client_card2 {
   left: 32%;
 }
-#client_card{
+
+#client_card {
   left: 15%;
 }
+
 @keyframes fade {
-  0% { opacity: 0 }
-  100% { opacity: 1 }
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
 }
-.kill_button{
+
+.kill_button {
   position: absolute;
   top: 0;
   left: 3%;
@@ -122,6 +154,7 @@ strong {
   font-size: 45px;
   cursor: pointer;
 }
+
 #second_card {
   background-color: rgba(39, 41, 58, 0.904);
   position: fixed;
@@ -135,6 +168,7 @@ strong {
 #second_card p, #client_card p {
   font-size: 1.3em;
 }
+
 #second_card span, #client_card span {
   font-size: 1.9em;
 }
@@ -151,6 +185,7 @@ strong {
     opacity: 1
   }
 }
+
 .chip {
   display: inline-block;
   padding: 0 25px;
@@ -161,9 +196,11 @@ strong {
   background-color: #d8d8d8;
   cursor: context-menu;
 }
-.chip:hover{
+
+.chip:hover {
   background-color: #a1a1a1
-} 
+}
+
 .closebtn {
   padding-left: 10px;
   color: #888;
@@ -176,58 +213,70 @@ strong {
 .closebtn:hover {
   color: #000;
 }
-textarea{
+
+textarea {
   height: 150px;
   background-color: rgba(27, 27, 27, 0.671)
 }
-.will_flow{
+
+.will_flow {
   overflow-y: scroll;
   height: 150px;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
   display: none;
 }
+
 .container_search {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 20px;
 }
-iframe{
+
+iframe {
   border: 0;
 }
-.iframe_dad{
+
+.iframe_dad {
   overflow: hidden;
 }
+
 .file_upload {
   color: black;
 }
-#in1, #in2{
+
+#in1, #in2 {
   color: rgb(0, 0, 0);
   margin: 1%;
 }
-#in3{
+
+#in3 {
   color: rgb(255, 255, 255);
   margin: 1%;
 }
-#in1::placeholder, #in2::placeholder{
+
+#in1::placeholder, #in2::placeholder {
   color: #000;
 }
+
 .nameInput {
   font-size: 4em;
   text-align: center;
   margin: 20px;
   height: 10vh;
 }
-.good
-{
+
+.good {
   position: relative;
 }
+
 .bad {
   color: red;
   position: relative;
 }
-.saveButton
-{
+
+.saveButton {
   height: 5vw;
   width: 5vw;
   border-radius: 50%;
@@ -238,21 +287,21 @@ iframe{
   right: 5vw;
   top: 15vh;
   background-color: #39A78E;
-
 }
-i, .material-icons{
+
+i, .material-icons {
   font-size: 0.7em
 }
-.free{
+
+.free {
   margin-top: 2vh;
 }
-.autoComplete
-{
-  opacity : 0.5
-}
-#editorWall
-{
 
+.autoComplete {
+  opacity: 0.5
+}
+
+#editorWall {
   width: 100vw;
   height: 200vh;
   /* background-color: #C0B283; */
@@ -260,58 +309,61 @@ i, .material-icons{
   background-repeat: no-repeat;
   background-size: cover;
 }
-.plusCat
-{
+
+.plusCat {
   font-size: 1.5em;
   padding: 2px;
-
 }
-.minosCat
-{
+
+.minosCat {
   margin: 2px;
   font-size: 1.5em;
   width: 3vh;
   padding: 2px;
 }
-.cicrcle
-{
+
+.cicrcle {
   width: 8vh;
   height: 8vh;
   border-radius: 50%;
   padding: 0;
-
 }
-table, .moving{
+
+table, .moving {
   color: white;
   font-size: 1.2rem;
 }
 
-.table_head{
+.table_head {
   background-color: rgb(74, 62, 247);
   box-shadow: 0px 0px 1px;
 }
-.table_body:hover{
+
+.table_body:hover {
   background-color: rgb(124, 124, 124);
   cursor: pointer;
 }
-.table_body{
+
+.table_body {
   transition-duration: 0.3s;
 }
-.arroww{
+
+.arroww {
   margin-left: 80px;
   margin-right: 80px;
 }
-.cicrcle:active{
+
+.cicrcle:active {
   background-color: #C0B283;
   color: black;
 }
-.freeLine
-{
+
+.freeLine {
   min-height: 3vh;
   margin-left: 2vw;
 }
-.printMode
-{
+
+.printMode {
   top: 15vh;
   position: absolute;
   height: 5vw;
@@ -322,6 +374,7 @@ table, .moving{
   border-color: gold;
   left: 5vw;
 }
+
 .page {
   position: absolute;
   top: 20vh;
@@ -334,18 +387,19 @@ table, .moving{
   border-color: gold;
   padding: 20px;
 }
-.boldy
-{
+
+.boldy {
   font-weight: bold;
   font-size: 1.2em;
 }
-.freeTitle
-{
+
+.freeTitle {
   font-size: 2em;
   display: inline-block;
   min-height: 7vh;
   min-width: 8vw;
 }
+
 .proprty {
   display: grid;
   grid-template-columns: 1fr 1fr 0.1fr 1fr 0.1fr 1fr 1fr;
@@ -354,12 +408,14 @@ table, .moving{
 
 .email {
   color: blue;
-  text-decoration: underline}
-.event
-{
+  text-decoration: underline
+}
+
+.event {
   min-height: 7vh;
   min-width: 10vw;
 }
+
 .summry {
   margin-left: 5vw;
   margin-top: 2vh;
@@ -376,14 +432,14 @@ table, .moving{
 }
 
 .plus {
-
   font-size: 1.5em;
-  padding-bottom:10px ;
+  padding-bottom: 10px;
 }
-.aboutJob
-{
+
+.aboutJob {
   min-height: 3vh;
 }
+
 /****************************************************************
  *
  * CSS Percentage Circle

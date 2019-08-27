@@ -20,8 +20,8 @@ class AnalyticsParallax extends Component {
                 <div className="section white">
                     <div className="row container_search center-align">
                         <h2 className="header"><i className="material-icons">description</i>The result is not satisfying?</h2>
-                        <h6 className="grey-text text-darken-3 lighten-3">You can use this link down here to use our smart editor to 
-                        modify you resume!</h6>
+                        <h6 className="grey-text text-darken-3 lighten-3">You can use the link down here to use our smart editor
+                         and modify your resume!</h6>
                         <Link to="/editor"><div className="waves-effect waves-light btn">Go to the editor!</div></Link>
                     </div>
                 </div>

@@ -7,7 +7,7 @@ class Navbar extends Component {
             <div>
                 <nav>
                     <div className="nav-wrapper nav_bar">
-                        <div href="#" className="brand-logo"><Link to="/">Medusa Resume</Link></div>
+                        <div href="#" className="brand-logo" id='brand-logo'><Link to="/">Medusa Resume</Link></div>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><Link to="/editor">Get Started</Link></li>
                             <li><Link to="/analytics">Upload Resume</Link></li>
