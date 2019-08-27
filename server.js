@@ -20,6 +20,10 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/', api)
 
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 app.listen(process.env.PORT || port, function () {
     console.log('listening on port ' + port)
   })
