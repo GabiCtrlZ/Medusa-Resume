@@ -4,7 +4,9 @@
   "description": "\"# Medusa-Resume-Backend\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "build": "pip install pyresparser & python -m spacy download en_core_web_sm & python -m nltk.downloader words & python -m nltk.downloader stopwords"
   },
   "repository": {
     "type": "git",
