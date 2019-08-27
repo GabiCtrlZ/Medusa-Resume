@@ -7,7 +7,7 @@ class analytics {
     }
     async toCustomar() {
         let text =  await pdfToText(this.pdf)
-        console.log(text)
+        console.log('this is the text' + text)
         let info = JSON.parse(await cvParse(this.pdf))
         let firstText = new exploringAsText(text)
         let obj = {
