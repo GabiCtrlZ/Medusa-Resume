@@ -3,7 +3,6 @@ const router = express.Router()
 const multer = require('multer')
 const fs = require('fs')
 const upload = multer()
-const model = require('../models/model')
 const Indev = require('../machine-learning/brain/individual')
 const Config = require('../analystics/newAnalysics/newAnalistics')
 const DataHandler = require("../machine-learning/brain/dataHandler")
@@ -24,24 +23,24 @@ getBest()
 //server routes
 router.post('/file', upload.any(), async function (req, res, next) {
     console.log('uploded file')
-    fs.writeFileSync('./user-files/temp.pdf', req.files[0].buffer)
-    let analitics = new Config('./user-files/temp.pdf')
+    fs.writeFileSync('./server/user-files/temp.pdf', req.files[0].buffer)
+    let analitics = new Config('./server/user-files/temp.pdf')
     let analyzedObj = await analitics.toCustomar()
     let dataArr = dataHandler.convertObjToArr(analyzedObj)
     analyzedObj['resumeScore'] = Math.floor(jellyFish.getSuperNiceScore(dataArr)) 
     res.send(analyzedObj)
-    fs.unlinkSync('./user-files/temp.pdf')
+    fs.unlinkSync('./server/user-files/temp.pdf')
 })
 
 router.post('/filebusiness', upload.any(), async function (req, res, next) {
     console.log('uploded files')
     let data = []
     for (let file of req.files) {
-        fs.writeFileSync('./business-files/temp.pdf', file.buffer)
-        let analitics = new Config('./business-files/temp.pdf')
+        fs.writeFileSync('./server/business-files/temp.pdf', file.buffer)
+        let analitics = new Config('./server/business-files/temp.pdf')
         let analyzedObj = await analitics.toComapny()
         data.push(analyzedObj)
-        fs.unlinkSync('./business-files/temp.pdf')
+        fs.unlinkSync('./server/business-files/temp.pdf')
     }
     res.send(data)
 })
