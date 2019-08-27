@@ -24,12 +24,12 @@ getBest()
 //server routes
 router.post('/file', upload.any(), async function (req, res, next) {
     console.log('uploded file')
-    const place = path.join(__dirname, 'server/user-files')
+    const place = path.join(__dirname, '..', 'user-files')
     fs.writeFileSync(`${place}/temp.pdf`, req.files[0].buffer)
     let analitics = new Config(`${place}/temp.pdf`)
     let analyzedObj = await analitics.toCustomar()
     let dataArr = dataHandler.convertObjToArr(analyzedObj)
-    analyzedObj['resumeScore'] = Math.floor(jellyFish.getSuperNiceScore(dataArr)) 
+    analyzedObj['resumeScore'] = Math.floor(jellyFish.getSuperNiceScore(dataArr))
     res.send(analyzedObj)
     fs.unlinkSync(`${place}/temp.pdf`)
 })
@@ -38,7 +38,7 @@ router.post('/filebusiness', upload.any(), async function (req, res, next) {
     console.log('uploded files')
     let data = []
     for (let file of req.files) {
-        const place = path.join(__dirname, 'server/business-files')
+        const place = path.join(__dirname, '..', 'business-files')
         fs.writeFileSync(`${place}/temp.pdf`, file.buffer)
         let analitics = new Config(`${place}/temp.pdf`)
         let analyzedObj = await analitics.toComapny()
