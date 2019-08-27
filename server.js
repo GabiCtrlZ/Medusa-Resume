@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 const api = require('./routes/api')
 const app = express()
 
-mongoose.connect('mongodb://localhost/resumes', {useNewUrlParser: true})
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/resumes', {useNewUrlParser: true})
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*')
@@ -20,6 +20,6 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/', api)
 
-app.listen(port, function () {
+app.listen(process.env.PORT || port, function () {
     console.log('listening on port ' + port)
   })

@@ -17,7 +17,6 @@ let jellyFish
 let dataHandler = new DataHandler()
 
 async function getBest() {
-    const neural = await model.neuralModel.find({}, { _id: 0, __v: 0 })
     jellyFish = new Indev(0, staticNet, true)
 }
 getBest()
