@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react'
-import './App.css';
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Landing from './components/Landing/Landing'

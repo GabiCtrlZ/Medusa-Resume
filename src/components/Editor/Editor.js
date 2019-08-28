@@ -11,9 +11,10 @@ class Editor extends Component {
         this.state = {
             xpNum  : 1,
             printMode : false,
-            saction : 0,
-            freeStyle : 0,
-            value : {}
+            saction : 1,
+            freeStyle :1,
+            value : {},
+            long : 0
         }
     }
     write = (str , pt) =>
@@ -22,20 +23,25 @@ class Editor extends Component {
         val[pt] = str
         this.setState({value : val})
         console.log(this.state.value)
+        let text =""
+        for (let sent in this.state.value)
+        {
+            text += this.state.value[sent].replace('|' , '') + ' '
+        }
+        this.setState({long : text.split(" ").length})
     }
     upLpoad = async () =>
     {
         let html = document.getElementsByClassName("page")[0].innerHTML
-        let css =document.getElementsByTagName("STYLE")[0].innerHTML.replace("#17326d" ,"white").replace("color: red" ,"")
-         let pdf =  await axios.post('https://api.pdfshift.io/v2/convert' ,{source : html ,css : css},{responseType: 'arraybuffer'}, {
-             auth: {
-                 username: 'c67c19767aae47498f123d885b2ae65a',
+        let pdf =  await axios.post('https://api.pdfshift.io/v2/convert' ,{source : html},{responseType: 'arraybuffer'}, {
+            auth: {
+                username: 'c67c19767aae47498f123d885b2ae65a',
                 password: " "
-             }
+            }
 
         })
-         let blob = new Blob([pdf.data], {type: 'application/pdf'})
-         saveAs(blob, "cv.pdf")
+        let blob = new Blob([pdf.data], {type: 'application/pdf'})
+        saveAs(blob, "cv.pdf")
     }
 
     add = () =>
@@ -61,7 +67,7 @@ class Editor extends Component {
         let temp = []
         for ( let i = 0 ; i< this.state.freeStyle ; i++)
         {
-            temp.push(<FreeStyle pt ={'free' +i} complete = {this.complete}  write = {this.write} printMode = {this.state.printMode} add = {this.addFree}/>)
+            temp.push(<FreeStyle pt ={'free' +i} write = {this.write} printMode = {this.state.printMode} add = {this.addFree}/>)
         }
         return temp
     }
@@ -70,32 +76,21 @@ class Editor extends Component {
         let temp = []
         for ( let i = 0 ; i< this.state.saction ; i++)
         {
-            temp.push(<Catgory pt ={'catgory' +i} write = {this.write} complete = {this.complete} rintMode = {this.state.printMode} add = {this.addSaction}/>)
+            temp.push(<Catgory pt ={'catgory' +i} write = {this.write}  printMode = {this.state.printMode} add = {this.addSaction}/>)
         }
         return temp
     }
-    complete =() =>
-    {
-        let text = ""
-        text += this.state.value.headName || ""
-        text +=this.state.value.headEmail || ""
-        text +=this.state.value.headAdress || ""
-        text +=this.state.value.headExplain || ""
 
-        return "j"
-    }
     render() {
         return (
             <div id={"editorWall"}>
                 <button onClick={this.printMode } className={"printMode"}>print mode</button>
-                {this.state.printMode ?<button className={"saveButton"}  onClick={this.upLpoad}>save</button>: null}
-            <div  className={"page"}>
-                <Head write = {this.write} complete = {this.complete} />
-                <Catgory pt = {'catgory'} write = {this.write} complete = {this.complete} printMode = {this.state.printMode} add = {this.addSaction}/>
-                {this.showSaction()}
-                <FreeStyle  write = {this.write} complete = {this.complete}  printMode = {this.state.printMode} add = {this.addFree}/>
-                {this.showFree()}
-            </div>
+                <button className={"saveButton"}  onClick={this.upLpoad}>{this.state.printMode ? 'save' : <span style={{color :this.state.long < 100 ? 'blue' : this.state.long < 400 ? 'green' : 'red'}}>{this.state.long}W</span>}</button>
+                <div  className={"page"}>
+                    <Head write = {this.write} />
+                    {this.showSaction()}
+                    {this.showFree()}
+                </div>
             </div>
 
 
