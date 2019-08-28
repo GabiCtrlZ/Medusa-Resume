@@ -22,7 +22,7 @@ class Catgory extends Component {
             this.state.show ?<div>
                  <InpurBar pt = {this.props.pt + 'title'} write = {this.props.write}  plachHolder = "Experience " shape = "event" name ="event"  />
                 {this.props.printMode ? null :
-                    <button className={"cicrcle"}><span onClick={this.addSaction} className="plusCat">+</span><span onClick={this.deleteSaction} className="plusCat">-</span></button>}
+                    <button id='botan' className={"cicrcle"}><span onClick={this.addSaction} className="plusCat">+</span><span onClick={this.deleteSaction} className="plusCat">-</span></button>}
                 <Event pt = {this.props.pt + 'event'} write = {this.props.write}  printMode = {this.props.printMode}/>
             </div>: null
         );

@@ -218,7 +218,11 @@ textarea {
   height: 150px;
   background-color: rgba(27, 27, 27, 0.671)
 }
-
+.code_stuff{
+  border-radius: 2%;
+  background-color: rgb(187, 187, 187);
+  padding: 1%;
+}
 .will_flow {
   overflow-y: scroll;
   height: 150px;
@@ -374,12 +378,18 @@ table, .moving {
   border-color: gold;
   left: 5vw;
 }
-
+#botan::after, #botan:focus{
+  background-color: #d8d8d8;
+}
+#botan {
+  background-color: #d8d8d8;
+}
 .page {
   position: absolute;
   top: 20vh;
-  width: 63vw;
-  min-height: 80vw;
+  width: 55vw;
+  font-size: 0.9em;
+  min-height: 70vw;
   background-color: white;
   margin-left: 20vw;
   border-style: ridge;

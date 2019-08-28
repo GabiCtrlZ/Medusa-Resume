@@ -84,8 +84,8 @@ class Editor extends Component {
     render() {
         return (
             <div id={"editorWall"}>
-                <button onClick={this.printMode } className={"printMode"}>print mode</button>
-                <button className={"saveButton"}  onClick={this.upLpoad}>{this.state.printMode ? 'save' : <span style={{color :this.state.long < 100 ? 'blue' : this.state.long < 400 ? 'green' : 'red'}}>{this.state.long}W</span>}</button>
+                <button id='botan' onClick={this.printMode } className={"printMode"}>print mode</button>
+                <button id='botan' className={"saveButton"}  onClick={this.upLpoad}>{this.state.printMode ? 'save' : <span style={{color :this.state.long < 100 ? 'blue' : this.state.long < 400 ? 'green' : 'red'}}>{this.state.long}W</span>}</button>
                 <div  className={"page"}>
                     <Head write = {this.write} />
                     {this.showSaction()}

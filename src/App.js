@@ -9,6 +9,7 @@ import Jobs from './components/Jobs/Jobs';
 import AnalyticsParallax from './components/Analytics/AnalyticsParallax';
 import dummyData from './components/Business/dummyData.json'
 import WhichBusiness from './components/Business/WhichBusiness';
+import Documentation from './components/Developers/Documentation';
 
 @observer
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
         <Route exact path='/jobs' render={() => <Jobs />} />
         <Route exact path='/business' render={() => <WhichBusiness />} />
         <Route exact path='/us' render={() => <Us />} />
+        <Route exact path='/devs' render={() => <Documentation />} />
       </Router>
     );
   }
