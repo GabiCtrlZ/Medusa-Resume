@@ -19,10 +19,10 @@ class FreeStyle extends Component {
     render() {
         return(
             this.state.show ?<div className={"free"}>
-                <InpurBar pt = {this.props.pt + 'title'} cwrite = {this.props.write} omplete = {this.props.complete} plachHolder = "free Style " shape = "freeTitle" name ="event"  />
+                <InpurBar pt = {this.props.pt + 'title'} cwrite = {this.props.write}  plachHolder = "free Style " shape = "freeTitle" name ="event"  />
                 {this.props.printMode?null :
                     <button className={"cicrcle"}><span onClick={this.addSaction} className="plusCat">+</span><span onClick={this.deleteSaction} className="minosCat">-</span></button>}
-                <InpurBar pt = {this.props.pt + 'explain'} write = {this.props.write} complete = {this.props.complete} plachHolder = "tell us about thing that did not depend on time like your skills or prizes" shape = "freeLine" name ="event"  />
+                <InpurBar pt = {this.props.pt + 'explain'} write = {this.props.write}  plachHolder = "tell us about thing that did not depend on time like your skills or prizes" shape = "freeLine" name ="event"  />
             </div>: null
         );
     }

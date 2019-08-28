@@ -379,7 +379,7 @@ table, .moving {
   position: absolute;
   top: 20vh;
   width: 63vw;
-  height: 80vw;
+  min-height: 80vw;
   background-color: white;
   margin-left: 20vw;
   border-style: ridge;

@@ -113,10 +113,7 @@ class InpurBar extends Component {
             this.setState({value : "" , old : false})
         }
     }
-    autoComplete =() =>
-    {
-        return this.props.complete()
-    }
+
     checkGramer = async ()=>
     {
         let str =""
@@ -138,7 +135,6 @@ class InpurBar extends Component {
                                       better = {this.state.bedWord.find(w => w.bad===l)?
                                           this.state.bedWord.find(w => w.bad===l).better: []}
                                       cls= {this.state.bedWord.find(w => w.bad===l)? "bad" : "good"} val ={l}/>
-                                      {l[l.length-1] == '|'? <span className={'autoComplete'}>{this.autoComplete()} </span>:null}
                                       </span>
                     }
                 })}

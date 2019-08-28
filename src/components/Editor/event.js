@@ -22,7 +22,7 @@ class Event extends Component{
         {
             arr.push(
                 <div  key={i} className={"expirince"}>
-            <OneEvent pt = {this.props.pt + i} write = {this.props.write}complete = {this.props.complete} printMode = {this.props.printMode} add ={this.add}/>
+            <OneEvent pt = {this.props.pt + i} write = {this.props.write} printMode = {this.props.printMode} add ={this.add}/>
                 </div>)
         }
         return this.state.show? arr : null
