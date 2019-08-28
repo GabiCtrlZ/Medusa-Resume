@@ -19,7 +19,7 @@ class ContactCard extends Component {
             alert('info not right')
             return
         }
-        axios.post('http://localhost:8080/sendsms', {
+        axios.post('/sendsms', {
             phoneNum: this.props.phone.toString(),
             company: this.props.companyName,
             text: this.state.sms
