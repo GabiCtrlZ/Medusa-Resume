@@ -29,7 +29,7 @@ class Analytics extends Component {
             <div className='container_search file_upload' >
                 {!this.state.data ? null : <Results data={this.state.data} />}
                 <div className='container center-align'>
-                    Select a file: <input type="file" name="myFile" id='file' /><br /><br />
+                    Select a PDF file: <input type="file" name="myFile" id='file' /><br /><br />
                     {this.state.sentPDF ? <div className='container'><Loader /></div> : <div className="waves-effect waves-light btn" onClick={this.sendFile} >Send</div>}
                 </div>
             </div>

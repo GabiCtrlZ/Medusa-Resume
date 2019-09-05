@@ -10,7 +10,7 @@ class AnalyticsParallax extends Component {
                     <div className="row container_search center-align">
                         <h2 className="header"><i className="material-icons">class</i>Score my resume!</h2>
                         <h6 className="grey-text text-darken-3 lighten-3">Use <strong>Jellyfish</strong>, the first jellyfish to have a brain, to score
-                        your resume!</h6>
+                        your resume! *only pdf*</h6>
                         <Analytics />
                     </div>
                 </div>
