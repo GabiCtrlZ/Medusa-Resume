@@ -3,8 +3,8 @@ class SmsSender {
     constructor() {
         this.nexmo = new Nexmo({
             // idialy, should be recieved from the env file, but the project is getting passed through several machines so...
-            apiKey: '3fdd4d13',
-            apiSecret: 'MacoF7kpNDWasaQW',
+            apiKey: 'undefined',
+            apiSecret: 'undefined',
         });
     }
     sendSMS(companyName, phoneNum, text) {
