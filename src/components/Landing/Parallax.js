@@ -14,7 +14,6 @@ class Parallax extends Component {
                         <h6 className="grey-text text-darken-3 lighten-3">Our site helps you create the perfect(ish) resume to impress
                         the companies you apply to!
                         With the help of our A.I, <strong>Jellyfish</strong>, and our smart editor, we'll guide you towards success!</h6>
-                        <Link to="/editor"><div className="waves-effect waves-light btn">Get Started</div></Link>
                     </div>
                 </div>
                 <div className="parallax-container">
