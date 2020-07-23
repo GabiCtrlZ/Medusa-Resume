@@ -14,7 +14,6 @@ class Navbar extends Component {
                             <li><Link to="/jobs">Find Jobs</Link></li>
                             <li><Link to="/business">Business</Link></li>
                             <li><Link to="/devs">Developers</Link></li>
-                            <li><Link to="/us">About us</Link></li>
                         </ul>
                     </div>
                 </nav>
